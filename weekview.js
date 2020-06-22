@@ -647,6 +647,12 @@ var WeekViewComponent = /** @class */ (function () {
         }
         this.onTimeSelected.emit({ selectedTime: selectedDate, events: viewDate.events.map(function (e) { return e.event; }), disabled: disabled });
     };
+
+
+    WeekViewComponent.prototype.eventSelected = function (event) {
+        this.onEventSelected.emit(event);
+    };
+
     WeekViewComponent.prototype.setScrollPosition = function (scrollPosition) {
         this.initScrollPosition = scrollPosition;
     };
